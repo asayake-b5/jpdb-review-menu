@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         JPDB Review
 // @namespace    https://jpdb.io
-// @version      0.1
-// @description  try to take over the world!
+// @version      0.2
+// @description  add a review menu to jpdb
 // @author       You
 // @match        https://jpdb.io/vocabulary/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
@@ -63,19 +63,19 @@ const reviewMenu = `
 <div class="dropdown-content">
 <ul>
 <li>
-  <a href="#" onclick="review(1)">Nothing</a>
+  <a href="javascript:;" onclick="review(1)">Nothing</a>
 </li>
 <li>
-  <a href="#" onclick="review(2)">Something</a>
+  <a href="javascript:;" onclick="review(2)">Something</a>
 </li>
 <li>
-  <a href="#" onclick="review(3)">Hard</a>
+  <a href="javascript:;" onclick="review(3)">Hard</a>
 </li>
 <li>
-  <a href="#" onclick="review(4)">Good</a>
+  <a href="javascript:;" onclick="review(4)">Good</a>
 </li>
 <li>
-  <a href="#" onclick="review(5)">Easy</a>
+  <a href="javascript:;" onclick="review(5)">Easy</a>
 </li>
 </ul>
 </div>
@@ -87,4 +87,8 @@ const reviewMenu = `
     'use strict';
     let menu = document.querySelector("div.menu:nth-child(3)");
     menu.insertAdjacentHTML('beforeend', reviewMenu);
+
+
+
+    // Your code here...
 })();
